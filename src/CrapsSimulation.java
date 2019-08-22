@@ -31,27 +31,31 @@ public class CrapsSimulation
 					{
 						System.out.println("You rolled a " + roll1 + " and a " + roll2 + ". Your point is " + rollResult + ", " +name);
 						
-						boolean result = true;
-						while (result)
-							{
+						
 								int try1 = (int)(Math.random()*6+1);
 								int try2 = (int)(Math.random()*6+1);
 								int tryResult = try1 + try2;
 								
-								if (tryResult != rollResult || tryResult != 7)
+								
+								if (tryResult != rollResult && tryResult != 7)
 									{
 								System.out.println("Your point is " + rollResult + ", but you rolled a " + try1 + " and a " + try2 + " for a total of " + tryResult);
+								
 									}
 								else if (tryResult == 7)
 									{
 										System.out.println(name + ", sorry, you rolled a 7. You lose!");
+										
 									}
 								else 
 									{
 										System.out.println(name + ", you win!");
+									
+									
 									}
-							}
+							
 					}
+								
 					
 			
 			}
