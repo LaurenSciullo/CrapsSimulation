@@ -38,7 +38,8 @@ public class CrapsSimulation
 				boolean rollAgain = true;
 				while (rollAgain) 
 					{
-						
+						System.out.println("Press enter to roll again");
+						String fake = userInput.nextLine();
 						
 						
 					int try1 = (int)(Math.random()*6+1);
@@ -46,13 +47,12 @@ public class CrapsSimulation
 					int tryResult = try1 + try2;
 						
 					
+					
 					if (tryResult != rollResult && tryResult != 7)
 						{
-							System.out.println("Press enter to roll again");
-							String fake = userInput.nextLine();
-					System.out.println("\nYour point is " + rollResult + ", but you rolled a " + try1 + " and a " + try2 + " for a total of " + tryResult);
-					
-					rollAgain = false;
+						
+					System.out.println("\nYour point is " + rollResult + ", but you rolled a " + try1 + " and a " + try2 + " for a total of " + tryResult);	
+				
 						}
 					else if (tryResult == 7)
 						{
@@ -61,8 +61,8 @@ public class CrapsSimulation
 						}
 					else 
 						{
-							System.out.println("\n" + name + ", you win! You rolled a " + try1 + " and a " + try2);
-							rollAgain = true;
+							System.out.println("\n" + name + ", you win! You rolled a " + try1 + " and a " + try2 + " and so your total of " + tryResult + " matched your point of " + rollResult);
+							rollAgain = false;
 					}
 								
 					}
