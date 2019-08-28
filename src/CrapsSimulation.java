@@ -22,7 +22,7 @@ public class CrapsSimulation
 				outputFirstRoll();
 				enterSecondRoll();
 				outputSecondRoll();
-				System.out.println("Testing.");
+				
 			}
 		
 
