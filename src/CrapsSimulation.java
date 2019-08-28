@@ -6,7 +6,7 @@ public class CrapsSimulation
 		static String fake;
 		static int rollResult;
 		static int tryResult;
-		static String bet;
+		static int bet;
 		static int balance;
 		static int roll1;
 		static int roll2;
@@ -86,9 +86,11 @@ public class CrapsSimulation
 						Scanner userInput = new Scanner(System.in);
 						 fake = userInput.nextLine();
 						
+							 
 							System.out.println("Enter the amount you would like to add to your roll: $");
-							 bet = userInput.nextLine();
+							 bet = userInput.nextInt();
 							 balance = 100; 
+		
 							
 					if (tryResult != rollResult && tryResult != 7)
 						{
@@ -98,12 +100,16 @@ public class CrapsSimulation
 						}
 					else if (tryResult == 7)
 						{
-							System.out.println("\n" + name + ", sorry, you rolled a " + try1 + " and a " + try2 + " for a total of 7. You lose! You owe: " + (balance + bet));
+							int losses = balance + bet;
+							System.out.println("\n" + name + ", sorry, you rolled a " + try1 + " and a " + try2 + " for a total of 7. You lose! You owe: $" + losses);
+							
 							rollAgain = false;			
 						}
 					else 
 						{
-							System.out.println("\n" + name + ", you win! You rolled a " + try1 + " and a " + try2 + " and so your total of " + tryResult + " matched your point of " + rollResult + " and you won : $" + (balance + bet));
+							int winnings = balance - bet;
+							System.out.println("\n" + name + ", you win! You rolled a " + try1 + " and a " + try2 + " and so your total of " + tryResult + " matched your point of " + rollResult + " and you won : $" + winnings );
+							
 							rollAgain = false;
 					}
 								
