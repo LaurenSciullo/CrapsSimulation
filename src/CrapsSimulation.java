@@ -107,7 +107,7 @@ public class CrapsSimulation
 						}
 					else 
 						{
-							int winnings = balance - bet;
+							int winnings = bet;
 							System.out.println("\n" + name + ", you win! You rolled a " + try1 + " and a " + try2 + " and so your total of " + tryResult + " matched your point of " + rollResult + " and you won : $" + winnings );
 							
 							rollAgain = false;
